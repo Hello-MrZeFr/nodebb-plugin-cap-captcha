@@ -1,0 +1,68 @@
+{
+  "id": "nodebb-plugin-cap-captcha",
+  "name": "Cap CAPTCHA",
+  "description": "Cap.js protection for NodeBB login and registration",
+  "url": "https://github.com/Hello-MrZeFr/nodebb-plugin-cap-captcha",
+  "library": "./library.js",
+  "hooks": [
+    {
+      "hook": "static:app.load",
+      "method": "load"
+    },
+    {
+      "hook": "filter:admin.header.build",
+      "method": "adminMenu",
+      "priority": 5
+    },
+    {
+      "hook": "filter:login.build",
+      "method": "addLoginCaptcha",
+      "priority": 5
+    },
+    {
+      "hook": "filter:register.build",
+      "method": "addRegisterCaptcha",
+      "priority": 5
+    },
+    {
+      "hook": "filter:login.check",
+      "method": "checkLogin",
+      "priority": 5
+    },
+    {
+      "hook": "filter:register.check",
+      "method": "checkRegister",
+      "priority": 5
+    },
+    {
+      "hook": "filter:config.get",
+      "method": "appendConfig",
+      "priority": 5
+    },
+    {
+      "hook": "action:settings.set",
+      "method": "settingsSet",
+      "priority": 5
+    }
+  ],
+  "scripts": [
+    "public/lib/client.js"
+  ],
+  "acpScripts": [
+    "public/lib/admin.js"
+  ],
+  "modules": {
+    "../admin/plugins/cap-captcha.js": "public/lib/admin.js"
+  },
+  "templates": "public/templates",
+  "languages": "languages",
+  "defaultLang": "en_GB",
+  "css": [
+    "public/lib/style.css"
+  ],
+  "faIcon": "fa-shield-halved",
+  "nbbpm": {
+    "compatibility": ">=4.0.0"
+  },
+  "version": "2.4.0"
+}

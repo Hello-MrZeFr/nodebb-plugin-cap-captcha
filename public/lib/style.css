@@ -1,0 +1,63 @@
+/* Cap CAPTCHA - direct widget presentation */
+.cap-captcha-form-entry {
+	width: 100%;
+	min-width: 0;
+	margin: 1rem 0 0;
+	padding: 0;
+}
+
+.cap-captcha-form-entry > label:empty {
+	display: none !important;
+}
+
+.cap-captcha-direct {
+	display: flex;
+	align-items: flex-start;
+	justify-content: flex-start;
+	width: 100%;
+	min-width: 0;
+	max-width: 100%;
+	margin: 0;
+	padding: 0;
+	overflow-x: hidden;
+}
+
+.cap-captcha-direct cap-widget {
+	display: block;
+	width: 300px;
+	max-width: 100%;
+	min-width: 0;
+	margin: 0;
+	padding: 0;
+}
+
+/* Keep the widget entirely inside the narrow desktop auth form. */
+@media (min-width: 769px) {
+	.cap-captcha-direct cap-widget {
+		max-width: 100%;
+		zoom: 0.92;
+		transform-origin: left top;
+	}
+}
+
+@media (max-width: 768px) {
+	.cap-captcha-form-entry {
+		margin-top: .9rem;
+	}
+
+	.cap-captcha-direct cap-widget {
+		width: 300px;
+		max-width: 100%;
+		zoom: 1;
+	}
+}
+
+@media (max-width: 360px) {
+	.cap-captcha-form-entry {
+		margin-top: .75rem;
+	}
+
+	.cap-captcha-direct cap-widget {
+		width: 100%;
+	}
+}

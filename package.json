@@ -1,0 +1,16 @@
+{
+  "name": "nodebb-plugin-cap-captcha",
+  "version": "2.4.0",
+  "description": "Cap.js CAPTCHA protection for NodeBB 4.x login and registration",
+  "main": "library.js",
+  "license": "MIT",
+  "keywords": [
+    "nodebb",
+    "captcha",
+    "cap",
+    "security"
+  ],
+  "engines": {
+    "node": ">=22"
+  }
+}
