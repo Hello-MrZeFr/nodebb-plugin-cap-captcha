@@ -1,3 +1,5 @@
+# 欢迎到我的论坛尝试(Welcome to try on my forum)
+https://www.emclub.top
 # nodebb-plugin-cap-captcha 2.3.0
 
 Cap.js protection for NodeBB 4.x login and registration only.
